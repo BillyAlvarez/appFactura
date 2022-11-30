@@ -1,7 +1,7 @@
 package cl.bjalvarez.appfacturas.modelo;
 
 public class Cliente {
-    private String nombre ;
+    private String nombre;
     private String nif;
 
     public String getNombre() {

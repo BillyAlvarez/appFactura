@@ -10,6 +10,14 @@ public class ItemFactura {
         this.producto = producto;
     }
 
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
     public Producto getProducto() {
         return producto;
     }
@@ -18,11 +26,14 @@ public class ItemFactura {
         this.producto = producto;
     }
 
-    public int getCantidad() {
-        return cantidad;
+    public float calcularImporte(){
+        return this.cantidad * this.producto.getPrecio();
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    @Override
+    public String toString() {
+        return producto.toString() +
+                "\t" + cantidad +
+                "\t" + calcularImporte();
     }
 }
